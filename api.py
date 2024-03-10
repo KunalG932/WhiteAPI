@@ -10,37 +10,50 @@ app = Flask(__name__)
 styles = """
 <style>
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+    color: #ecf0f1;
 }
 
 .container {
     max-width: 800px;
-    margin: auto;
+    margin: 5% auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
-    color: #333;
+    color: #3498db;
 }
 
 p {
-    color: #666;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 pre {
-    background-color: #f4f4f4;
+    background-color: #34495e;
     padding: 10px;
+    color: #ecf0f1;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 </style>
 """
 
-# Default landing page
+# Enhanced landing page
 @app.route('/')
 def landing_page():
     return """
@@ -63,7 +76,7 @@ def landing_page():
         <li>filter (optional): Data filter (e.g., today, this_week, this_year, or a specific number of days)</li>
         </ul>
         <p>Example:</p>
-        <pre>GET /news?q=technology&filter=this_week</pre>
+        <pre>GET /news?q=technology&filter=today</pre>
     </div>
     </body>
     </html>
