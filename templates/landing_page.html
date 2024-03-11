@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>White API</title>
+{{ styles|safe }}
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to White API</h1>
+    <p>This API allows you to fetch news articles from various news sites.</p>
+    <p>Usage:</p>
+    <ul>
+    <li>GET /news?q=search_term&filter=data_filter</li>
+    </ul>
+    <p>Parameters:</p>
+    <ul>
+    <li>q (required): Search term</li>
+    <li>filter (optional): Data filter (e.g., today, this_week, this_year, or a specific number of days)</li>
+    </ul>
+    <p>Example:</p>
+    <pre>GET /news?q=technology&filter=today</pre>
+</div>
+</body>
+</html>
