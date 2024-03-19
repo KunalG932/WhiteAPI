@@ -2,3 +2,4 @@ Flask==2.2.2
 pandas
 requests
 beautifulsoup4
+sanic==19.6.0
