@@ -73,4 +73,4 @@ def get_all_news():
     return jsonify(news.to_dict(orient='records'))
 
 if __name__ == '__main__':
-    app.run(host='128.199.249.208',port='5000')
+    app.run(debug=True)
